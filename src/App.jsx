@@ -12,7 +12,7 @@ function App() {
   ]);
 
   function addTodos(todoText) {
-      let nextId = todos.length;
+      let nextId = todos.length+1;
       setTodos([...todos,{id: nextId,text: todoText,isFinished: false}])
   }
 
@@ -20,7 +20,7 @@ function App() {
   return (
     <>
      <AddTodo addTodos={addTodos}/>
-     <Todolist todos={todos}/>
+     <Todolist todos={todos} setTodos={setTodos}/>
     </>
   )
 }

@@ -1,10 +1,10 @@
-function Todo({text,isFinished}){
+function Todo({text,isFinished,deleteTodo}){
     return(
         <div>
             <input type="checkbox" checked = {isFinished}/>
             <span>{text}</span>
             <button>Edit</button>
-            <button>Delete</button>
+            <button onClick={deleteTodo}>Delete</button>
         </div>
     )
 }
